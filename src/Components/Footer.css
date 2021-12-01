@@ -18,13 +18,14 @@
   padding: 1rem;
 }
 .group__contact {
+  width: 20%;
+  height: 20%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 20%;
-  border: 2px solid red;
-  text-align: center;
+  font-size: 15px;
 }
 .group__contact i {
-  align-self: center;
+  position: relative;
+  top: -6px;
 }

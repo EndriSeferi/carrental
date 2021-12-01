@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./MyCarousel.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -22,14 +22,43 @@ function MyCarousel() {
       items: 1,
     },
   };
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchMeals = async () => {
+      const response = await fetch(
+        "https://elitecarrental-9c650-default-rtdb.europe-west1.firebasedatabase.app/car.json"
+      );
+      const responseData = await response.json();
+      const loadedData = [];
+      for (const key in responseData) {
+        loadedData.push({
+          id: key,
+          img: responseData[key].img,
+          name: responseData[key].name,
+          model: responseData[key].model,
+          price: responseData[key].price,
+        });
+      }
+      setData(loadedData);
+    };
+    fetchMeals();
+  }, []);
+
   return (
     <div className="big-carousel">
-      <h2>--------OUR BEST CARS</h2>
+      <h2 className="best__cars">OUR BEST CARS</h2>
       <Carousel responsive={responsive} showDots={true} className="carousel">
-        <CarCard />
-        <CarCard />
-        <CarCard />
-        <CarCard />
+        {data.map((car, index) => {
+          return (
+            <CarCard
+              key={index}
+              image={car.img}
+              name={car.name}
+              model={car.model}
+              price={car.price}
+            />
+          );
+        })}
       </Carousel>
     </div>
   );
