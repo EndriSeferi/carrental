@@ -1,0 +1,9 @@
+.big-carousel{
+    background-color: black;
+    height: 50vh;
+    margin-top: 10rem;
+}
+.carousel__image{
+    width: 50%;
+    height: 30vh;
+}
