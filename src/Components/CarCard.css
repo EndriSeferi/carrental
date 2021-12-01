@@ -1,0 +1,77 @@
+.card {
+  padding: 1rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+}
+.card img {
+  width: 30%;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 70%;
+  padding: 1rem;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.title h2 {
+  color: #1c1f23;
+}
+.tag-reservation {
+  background-color: green;
+  font-size: 10px;
+  border-radius: 5px;
+  color: white;
+  padding: 0.1rem 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.characteristics {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  width: 35%;
+}
+.group i {
+  width: 40%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.end {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0rem;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.price p {
+  margin: 0;
+  color: gray;
+}
+.price h3 {
+  margin: 0;
+  color: #1c1f23;
+}
