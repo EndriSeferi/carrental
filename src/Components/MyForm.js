@@ -6,7 +6,7 @@ function MyForm() {
     <div className="form-container">
       <h2>Elite Rental Cars</h2>
       <form>
-        <div style={{ margin: "auto", maxWidth: "400px" }}>
+        <div className="form__inputs">
           <div className="input-icons">
             <i className="fa fa-map-marker icon"></i>
             <input className="input-field" type="text" placeholder="Enter location here..." />

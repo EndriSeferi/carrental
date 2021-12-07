@@ -1,49 +1,71 @@
-.form-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 3rem;
-    border-radius: 5px;
-    box-shadow: 8px 8px 8px black;
-    transform: translate(0%,50%);
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 8px 8px 8px black;
+  transform: translate(-10%, 40%);
 }
-.form-container h2{
-    color: black;
+.form-container h2 {
+  color: black;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-input{
-    margin: .5rem;
-    padding: .2rem;
+input {
+  margin: 0.5rem;
+  padding: 0.2rem;
+  font-size: 1vw;
 }
-.my-btn{
-    width: 50%;
-    align-self: center;
-    margin-top: 1rem;
+.my-btn {
+  width: 50%;
+  align-self: center;
+  margin-top: 1rem;
 }
 
 .input-icons i {
-    position: absolute;
+  position: absolute;
+  font-size: 1vw;
 }
-  
+
 .input-icons {
-    width: 100%;
-    margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 }
-  
+
 .icon {
-    padding: 20px;
-    width: 20%;
-    min-width: 40px;
+  padding: 20px;
+  width: 20%;
+  min-width: 40px;
 }
-  
+
 .input-field {
-    width: 100%;
-    padding: .4rem;
-    text-align: center;
+  width: 100%;
+  padding: 0.4rem;
+  text-align: center;
+}
+
+.form__inputs {
+  margin: auto;
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-container {
+    transform: translate(0, 0);
+    padding: 1rem;
+  }
+  .form-container h2 {
+    font-size: 4vw;
+  }
+  
+  .my-btn{
+      font-size: 2vw;
+      align-self: flex-start;
+  }
 }
