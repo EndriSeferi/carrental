@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import "./CarCard.css";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function CarCard(props) {
   return (
@@ -30,7 +30,7 @@ function CarCard(props) {
         </div>
         <div className="end">
           <Button variant="dark" className="my-btn">
-            Check Me!
+            <Link to={`/cars/${props.carId}`}>Check me!</Link>
           </Button>
           <div className="price">
             <p>Price</p>

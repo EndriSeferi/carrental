@@ -33,6 +33,7 @@ function MyCarousel() {
       for (const key in responseData) {
         loadedData.push({
           id: key,
+          carId: responseData[key].id,
           img: responseData[key].img,
           name: responseData[key].name,
           model: responseData[key].model,
@@ -52,6 +53,7 @@ function MyCarousel() {
           return (
             <CarCard
               key={index}
+              carId={car.carId}
               image={car.img}
               name={car.name}
               model={car.model}

@@ -1,0 +1,10 @@
+.car{
+    height: 80vh;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.car h2{
+    color: black;
+}
