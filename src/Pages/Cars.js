@@ -4,7 +4,7 @@ import "./Cars.css";
 function Cars() {
   let { carUrlId } = useParams();
   const [data, setData] = useState({});
-  
+
   useEffect(() => {
     const fetchCars = async () => {
       const response = await fetch(
@@ -23,7 +23,7 @@ function Cars() {
             model: responseData[key].model,
             price: responseData[key].price,
           });
-        } 
+        }
       }
     };
     fetchCars();
@@ -32,9 +32,27 @@ function Cars() {
   return (
     <div className="car">
       <img src={data.img} alt="Selected Car Image" />
-      <h2>{data.name}</h2>
-      <h2>{data.model}</h2>
-      <h2>{data.price}</h2>
+      <div className="car-info">
+        <h1>{data.name}</h1>
+        <h3>Model: {data.model}</h3>
+        <div className="conditions">
+            <p>Persons</p>
+            <p>Bags</p>
+            <p>Automatic</p>
+            <p>Petrol</p>
+            <p>Air-Condition</p>
+        </div>
+        <div className="price">
+          <h2>{data.price}$</h2>
+          Price/day
+        </div>
+      </div>
+      <div className="card-reservation">
+      <input type="location" placeholder="Location" />
+          <input type="date"  />
+          <input type="date"  />
+          <button>Reserve</button>
+      </div>
     </div>
   );
 }

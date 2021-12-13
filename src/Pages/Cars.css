@@ -1,10 +1,50 @@
 .car{
-    height: 80vh;
     color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
-.car h2{
-    color: black;
+
+.car-info{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: flex-start;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    flex-wrap: wrap;
+}
+.car img{
+    width: 50%;
+}
+.price{
+    align-self: flex-end;
+}
+.car-info h3{
+    color: gray;
+}
+.conditions{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.conditions p{
+    width: 35%;
+}
+.card-reservation{
+    width: 100%;
+    display: flex;
+    background-color: rgb(152, 178, 187);
+    justify-content: center;
+    padding: 1rem;
+}
+.card-reservation button{
+    background-color: green;
+    padding: 0 1rem;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
 }
