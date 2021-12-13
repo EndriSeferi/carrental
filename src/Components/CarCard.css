@@ -38,6 +38,14 @@
 }
 .reserved {
   background-color: brown;
+  font-size: 1vw;
+  border-radius: 5px;
+  color: white;
+  padding: 0.1rem 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .characteristics {
   width: 50%;

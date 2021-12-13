@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CarCard.css";
 import { Button } from "react-bootstrap";
 
@@ -9,7 +9,6 @@ function CarCard(props) {
       <div className="info">
         <div className="title">
           <h2>{props.name}</h2>
-          <div className="tag-reservation">Reserved</div>
         </div>
         <div className="characteristics">
           <div className="group">

@@ -11,6 +11,13 @@
 }
 .form-container h2 {
   color: black;
+  font-size: 2vw;
+
+}
+.labels{
+  display: flex;
+  justify-content: space-around;
+  font-size: 1vw;
 }
 form {
   display: flex;
