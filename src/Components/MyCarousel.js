@@ -38,6 +38,8 @@ function MyCarousel() {
           name: responseData[key].name,
           model: responseData[key].model,
           price: responseData[key].price,
+          conditions: responseData[key].conditions
+
         });
       }
       setData(loadedData);
@@ -58,6 +60,7 @@ function MyCarousel() {
               name={car.name}
               model={car.model}
               price={car.price}
+              conditions={car.conditions}
             />
           );
         })}

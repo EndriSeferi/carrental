@@ -12,21 +12,26 @@ function CarCard(props) {
         </div>
         <div className="characteristics">
           <div className="group">
-            <i className="fa fa-map-marker" />
-            <p>text</p>
+            <i className="fa fa-chair" />
+            <p>{props.conditions.seats}</p>
           </div>
           <div className="group">
-            <i className="fa fa-map-marker" />
-            <p>text</p>
+            <i className="fa fa-suitcase" />
+            <p>{props.conditions.luggage}</p>
           </div>
           <div className="group">
-            <i className="fa fa-map-marker" />
-            <p>text</p>
+            <i className="fas fa-gas-pump" />
+            <p>{props.conditions.petrol}</p>
           </div>
-          <div className="group">
-            <i className="fa fa-map-marker" />
-            <p>text</p>
-          </div>
+
+          {props.conditions.air ==="yes" ? (
+            <div className="group">
+              <i className="fa fa-snowflake" />
+              <p>Air-Condition</p>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
         <div className="end">
           <Button variant="dark" className="my-btn">

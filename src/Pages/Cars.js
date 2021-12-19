@@ -22,6 +22,7 @@ function Cars() {
             name: responseData[key].name,
             model: responseData[key].model,
             price: responseData[key].price,
+            conditions: responseData[key].conditions
           });
         }
       }
@@ -36,11 +37,11 @@ function Cars() {
         <h1>{data.name}</h1>
         <h3>Model: {data.model}</h3>
         <div className="conditions">
-            <p>Persons</p>
-            <p>Bags</p>
-            <p>Automatic</p>
-            <p>Petrol</p>
-            <p>Air-Condition</p>
+            <p>{data.conditions.seats}</p>
+            <p>{data.conditions.luggage}</p>
+            <p>{data.conditions.manual}</p>
+            <p>{data.conditions.petrol}</p>
+            <p>{data.conditions.air}</p>
         </div>
         <div className="price">
           <h2>{data.price}$</h2>
