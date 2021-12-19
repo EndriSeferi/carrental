@@ -32,11 +32,20 @@ function CarCard(props) {
           ) : (
             ""
           )}
+          {props.conditions.manual ==="yes" ? (
+            <div className="group">
+              <i className="fa fa-tachometer-alt" />
+              <p>Manual</p>
+            </div>
+          ) : (
+            <div className="group">
+              <i className="fa fa-tachometer-alt" />
+              <p>Automatic</p>
+            </div>
+          )}
         </div>
         <div className="end">
-          <Button variant="dark" className="my-btn">
-            <Link to={`/cars/${props.carId}`}>Check me!</Link>
-          </Button>
+            <Link to={`/cars/${props.carId}`} className="link__car">Check Car!</Link>
           <div className="price">
             <p>Price</p>
             <h4>{props.price}$/day</h4>

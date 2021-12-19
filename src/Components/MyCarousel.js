@@ -60,7 +60,7 @@ function MyCarousel() {
               name={car.name}
               model={car.model}
               price={car.price}
-              conditions={car.conditions}
+              conditions={car.conditions  }
             />
           );
         })}

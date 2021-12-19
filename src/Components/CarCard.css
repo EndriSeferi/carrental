@@ -48,7 +48,7 @@
   align-items: center;
 }
 .characteristics {
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -59,10 +59,14 @@
   justify-content: center;
   align-items: center;
   color: gray;
-  width: 35%;
+  width: 50%;
+}
+.group p{
+  font-size: .6vw;
+  width: 80%;
 }
 .group i {
-  width: 40%;
+  width: 30%;
   text-align: center;
   position: relative;
   top: -6px;
@@ -85,4 +89,16 @@
 .price h3 {
   margin: 0;
   color: #1c1f23;
+}
+.link__car{
+  color: white;
+  text-decoration: none;
+  background-color: #1c1f23;
+  text-align: center;
+  border-radius: 5px;
+  width: 40%;
+  padding: .5rem 1rem ;
+  height: 40px;
+  margin-top: 10%;
+  font-size: .8vw;
 }
