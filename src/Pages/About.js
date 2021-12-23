@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./Pages.css";
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
 function About() {
-  const [value, onChange] = useState(new Date());
-  function handleDisabled(){
-    const test=new Date(12-12-2021)
-  }
   return (
     <div className="sector">
       <h2>About</h2>
@@ -16,12 +10,6 @@ function About() {
       assumenda omnis, dignissimos asperiores ad aspernatur optio nobis
       possimus, commodi repudiandae consequuntur debitis fugiat aliquam. Tempore
       cumque beatae harum dignissimos.
-      <Calendar
-        onChange={onChange}
-        value={value}
-        selectRange={true}
-        tileDisabled={handleDisabled}
-      />
     </div>
   );
 }

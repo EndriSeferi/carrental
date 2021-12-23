@@ -11,7 +11,6 @@ function Cars() {
         "https://elitecarrental-9c650-default-rtdb.europe-west1.firebasedatabase.app/car.json"
       );
       const responseData = await response.json();
-      const loadedData = [];
 
       for (const key in responseData) {
         if (responseData[key].id === carUrlId) {
@@ -22,7 +21,11 @@ function Cars() {
             name: responseData[key].name,
             model: responseData[key].model,
             price: responseData[key].price,
-            conditions: responseData[key].conditions
+            seats: responseData[key].conditions.seats,
+            luggage: responseData[key].conditions.luggage,
+            petrol: responseData[key].conditions.petrol,
+            manual: responseData[key].conditions.manual,
+            air: responseData[key].conditions.air,
           });
         }
       }
@@ -36,12 +39,39 @@ function Cars() {
       <div className="car-info">
         <h1>{data.name}</h1>
         <h3>Model: {data.model}</h3>
-        <div className="conditions">
-            <p>{data.conditions.seats}</p>
-            <p>{data.conditions.luggage}</p>
-            <p>{data.conditions.manual}</p>
-            <p>{data.conditions.petrol}</p>
-            <p>{data.conditions.air}</p>
+        <div className="characteristics">
+          <div className="group">
+            <i className="fa fa-chair" />
+            <p>{data.seats}</p>
+          </div>
+          <div className="group">
+            <i className="fa fa-suitcase" />
+            <p>{data.luggage}</p>
+          </div>
+          <div className="group">
+            <i className="fas fa-gas-pump" />
+            <p>{data.petrol}</p>
+          </div>
+
+          {data.air ==="yes" ? (
+            <div className="group">
+              <i className="fa fa-snowflake" />
+              <p>Air-Condition</p>
+            </div>
+          ) : (
+            ""
+          )}
+          {data.manual ==="yes" ? (
+            <div className="group">
+              <i className="fa fa-tachometer-alt" />
+              <p>Manual</p>
+            </div>
+          ) : (
+            <div className="group">
+              <i className="fa fa-tachometer-alt" />
+              <p>Automatic</p>
+            </div>
+          )}
         </div>
         <div className="price">
           <h2>{data.price}$</h2>

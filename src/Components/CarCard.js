@@ -1,5 +1,4 @@
 import "./CarCard.css";
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function CarCard(props) {
