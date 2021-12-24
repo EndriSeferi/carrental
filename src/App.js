@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import Policy from "./Pages/Policy";
 import Cars from "./Pages/Cars";
 import Available from "./Pages/Available";
+import Login from "./Pages/login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/policy" element={<Policy />} />
         <Route path="/cars/:carUrlId" element={<Cars />} />
         <Route path="/available/:dates" element={<Available />} />
+        <Route path="/admin" element={<Login />} />
       </Routes>
       <Footer />
     </div>

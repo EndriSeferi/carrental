@@ -20,6 +20,7 @@ function MyNavbar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>
             <Nav.Link href="/policy">Our Policy</Nav.Link>
+            <Nav.Link href="/admin">Admin</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -9,7 +9,7 @@ function Available() {
   useEffect(() => {
     const fetchReservedInformation = async () => {
       const response = await fetch(
-        "https://elitecarrental-9c650-default-rtdb.europe-west1.firebasedatabase.app/reservation.json"
+        process.env.REACT_APP_FIREBASE_RESERVATION_DB
       );
       const responseData = await response.json();
       const loadedData = [];

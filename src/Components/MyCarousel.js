@@ -26,7 +26,7 @@ function MyCarousel() {
   useEffect(() => {
     const fetchMeals = async () => {
       const response = await fetch(
-        "https://elitecarrental-9c650-default-rtdb.europe-west1.firebasedatabase.app/car.json"
+        process.env.REACT_APP_FIREBASE_CARS_DB
       );
       const responseData = await response.json();
       const loadedData = [];
